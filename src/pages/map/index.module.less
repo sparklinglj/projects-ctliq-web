@@ -1,0 +1,29 @@
+.mapContainer {
+  position: relative;
+  height: calc(100vh - 80px);
+  width: 100%;
+  overflow: hidden;
+  :global {
+    .siteItem {
+      color: #333;
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .text {
+        background-color: #fff;
+        padding: 1px 3px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+    .carItem {
+      color: #fff;
+      padding: 5px;
+      border-radius: 10px;
+      background-color: rgb(255, 22, 76);
+      outline: 5px solid rgba(255, 22, 76, 0.392);
+    }
+  }
+}

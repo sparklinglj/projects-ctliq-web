@@ -1,0 +1,56 @@
+.sideBarContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex: 0 0 var(--sidebar-width);
+  width: var(--sidebar-width);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 10;
+  background-color: var(--dark-bg);
+  border-radius: 4px;
+  color: #fff;
+  // box-shadow: 0 2px 2px var(--dark-bg);
+  :global {
+    .ant-menu {
+      border-radius: 4px;
+    }
+  }
+}
+.logoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 8px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.collapsed {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.menuList {
+  flex: 1;
+  overflow-y: auto;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(89, 89, 89, 0.1);
+  }
+}
+.operate {
+  height: 40px;
+  box-shadow: inset 0px 1px 0px #f0f0f0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  .item {
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+}

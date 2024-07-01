@@ -1,0 +1,14 @@
+/node_modules
+/.env.local
+/.umirc.local.ts
+/config/config.local.ts
+/src/.umi
+/src/.umi-production
+/dist
+dist.zip
+.vscode
+/build_deploy
+./yarn-error.log
+public/chinaArea.geojson
+public/chinaCity.geojson
+public/chinaMap.geojson

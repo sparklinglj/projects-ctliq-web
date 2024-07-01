@@ -1,0 +1,2563 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8500",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/v1/rtdatamovingsite/list": {
+      "post": {
+        "tags": ["rtdata-moving-site-controller"],
+        "operationId": "list",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RtdataMovingSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageRtdataMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/rtdatafixedsite/list": {
+      "post": {
+        "tags": ["rtdata-fixed-site-controller"],
+        "operationId": "list_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RtdataFixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageRtdataFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/movingsite/list": {
+      "post": {
+        "tags": ["moving-site-controller"],
+        "operationId": "list_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MovingSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/logout": {
+      "post": {
+        "tags": ["employee-controller"],
+        "operationId": "logout",
+        "parameters": [
+          {
+            "name": "X-Auth-Employee",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/login": {
+      "post": {
+        "tags": ["employee-controller"],
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RLoginVo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loadfixedsite/list": {
+      "post": {
+        "tags": ["load-fixed-site-controller"],
+        "operationId": "list_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadFixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageLoadFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fixedsite/list": {
+      "post": {
+        "tags": ["fixed-site-controller"],
+        "operationId": "list_4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/eventmovingsite/list": {
+      "post": {
+        "tags": ["event-moving-site-controller"],
+        "operationId": "list_5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventMovingSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageEventMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/eventfixedsite/list": {
+      "post": {
+        "tags": ["event-fixed-site-controller"],
+        "operationId": "list_6",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventFixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageEventFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/employee/list": {
+      "post": {
+        "tags": ["employee-controller"],
+        "operationId": "list_7",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageEmployee"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cvtmovingsite/list": {
+      "post": {
+        "tags": ["cvt-moving-site-controller"],
+        "operationId": "list_8",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CVTMovingSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageCVTMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cvtfixedsite/list": {
+      "post": {
+        "tags": ["cvt-fixed-site-controller"],
+        "operationId": "list_9",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CVTFixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageCVTFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/controlmovingsite/list": {
+      "post": {
+        "tags": ["control-moving-site-controller"],
+        "operationId": "list_10",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlMovingSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageControlMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/controlfixedsite/list": {
+      "post": {
+        "tags": ["control-fixed-site-controller"],
+        "operationId": "list_11",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlFixedSiteListQuery"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RPageControlFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/movingsite/get/{id}": {
+      "get": {
+        "tags": ["moving-site-controller"],
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RMovingSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fixedsite/get/{id}": {
+      "get": {
+        "tags": ["fixed-site-controller"],
+        "operationId": "getById_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RFixedSite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/employee/get/{id}": {
+      "get": {
+        "tags": ["employee-controller"],
+        "operationId": "getById_2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RString"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/REmployee"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RString": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "OrderItem": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "asc": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Pages": {
+        "type": "object",
+        "properties": {
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          }
+        }
+      },
+      "RtdataMovingSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "PageRtdataMovingSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RtdataMovingSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageRtdataMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageRtdataMovingSite"
+          }
+        }
+      },
+      "RtdataMovingSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "workState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "posLongitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "posLatitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "speed": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "RtdataFixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "PageRtdataFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RtdataFixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageRtdataFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageRtdataFixedSite"
+          }
+        }
+      },
+      "RtdataFixedSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "liquidLevelValue": {
+            "type": "number",
+            "format": "float"
+          },
+          "temperatureValue": {
+            "type": "number",
+            "format": "float"
+          },
+          "tankId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "MovingSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "MovingSite": {
+        "type": "object",
+        "properties": {
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "movingSiteVagon": {
+            "type": "string"
+          },
+          "workTeamId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PageMovingSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MovingSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageMovingSite"
+          }
+        }
+      },
+      "LoginVo": {
+        "required": ["employeeName", "passWord"],
+        "type": "object",
+        "properties": {
+          "employeeName": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9-_#@/.|]{1,31}$",
+            "type": "string"
+          },
+          "passWord": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9-_#@/.|]{1,31}$",
+            "type": "string"
+          }
+        }
+      },
+      "RLoginVo": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginVo"
+          }
+        }
+      },
+      "LoadFixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "LoadFixedSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tankI": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadTimercnt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "operatorI": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unlockType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PageLoadFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadFixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageLoadFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageLoadFixedSite"
+          }
+        }
+      },
+      "FixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "FixedSite": {
+        "type": "object",
+        "properties": {
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fixedSiteName": {
+            "type": "string"
+          },
+          "fixedSiteRegion": {
+            "type": "string"
+          },
+          "fixedSiteLongitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "fixedSiteLatitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "workTeamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "tankNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "operator1Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator2Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator3Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator4Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator5Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator6Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator7Id": {
+            "type": "number",
+            "format": "double"
+          },
+          "operator8Id": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "PageFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageFixedSite"
+          }
+        }
+      },
+      "EventMovingSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "EventMovingSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "posLongitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "posLatitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PageEventMovingSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventMovingSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageEventMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageEventMovingSite"
+          }
+        }
+      },
+      "EventFixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "EventFixedSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "eventType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PageEventFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventFixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageEventFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageEventFixedSite"
+          }
+        }
+      },
+      "EmployeeListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "Employee": {
+        "type": "object",
+        "properties": {
+          "employeeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "employeeName": {
+            "type": "string"
+          },
+          "employeeClass": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeFace": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "employeePhoto": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "employeePhone": {
+            "type": "string"
+          }
+        }
+      },
+      "PageEmployee": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Employee"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageEmployee": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageEmployee"
+          }
+        }
+      },
+      "CVTMovingSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "CVTMovingSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiDevice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDi485link": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiWork": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiEvent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "posLongitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "posLatitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "speed": {
+            "type": "number",
+            "format": "double"
+          },
+          "cvtAiFixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnMode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PageCVTMovingSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CVTMovingSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageCVTMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageCVTMovingSite"
+          }
+        }
+      },
+      "CVTFixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "CVTFixedSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiDevice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDi485link": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiWork": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtDiEvent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiLevel0": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiTemperature0": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiLevel1": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiTemperature1": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiLevel2": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiTemperature2": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiLevel3": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiTemperature3": {
+            "type": "number",
+            "format": "float"
+          },
+          "cvtAiEtnType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnMode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnTankNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnFaceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnTankI": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cvtAiEtnLoadTimecnt": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PageCVTFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CVTFixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageCVTFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageCVTFixedSite"
+          }
+        }
+      },
+      "ControlMovingSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "ControlMovingSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "movingSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setDo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isExecuted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PageControlMovingSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ControlMovingSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageControlMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageControlMovingSite"
+          }
+        }
+      },
+      "ControlFixedSiteListQuery": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "$ref": "#/components/schemas/Pages"
+          }
+        }
+      },
+      "ControlFixedSite": {
+        "type": "object",
+        "properties": {
+          "dataTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fixedSiteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setState": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setDo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isExecuted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "PageControlFixedSite": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ControlFixedSite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "deprecated": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "searchCount": {
+            "type": "boolean",
+            "deprecated": true
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          },
+          "countId": {
+            "type": "string",
+            "deprecated": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RPageControlFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageControlFixedSite"
+          }
+        }
+      },
+      "RMovingSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/MovingSite"
+          }
+        }
+      },
+      "RFixedSite": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/FixedSite"
+          }
+        }
+      },
+      "REmployee": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Employee"
+          }
+        }
+      }
+    }
+  }
+}
